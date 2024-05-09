@@ -143,7 +143,6 @@ header {
   height: 100vh;
   background: url("../assets/img/bg-header.webp") center/cover fixed;
   color: #fff;
-  font-weight: 900;
   font-size: 49px;
   display: flex;
   justify-content: center;
