@@ -16,28 +16,37 @@ header {
     }
 
     h1 {
-        font-size: 2rem;
-
+        font-size: 2.6rem;
+        margin-bottom: 30px;
+        line-height: 3.3rem;
+    
         @include md-screen {
             font-size: 4rem;
-            line-height: 4.4rem;
+            line-height: 4.5rem;
         }
 
         @include lg-screen {
             font-size: 6rem;
-            line-height: 7rem;
+            line-height: 6.7rem;
         }
 
         z-index: 1;
 
-        line-height: 2rem;
-        margin-bottom: 40px;
     }
 
     p {
         margin-bottom: 40px;
-        width: 60%;
-        line-height: 1.8rem;
+        width: 90%;
+        @include md-screen{
+            width: 70%;
+            font-size: 1.5rem;
+        }
+        @include lg-screen{
+            width: 50%;
+            font-size: 1.7rem;
+        }
+
+        line-height: 2rem;
         font-size: 1.4rem;
 
     }
@@ -56,11 +65,11 @@ header {
         font-weight: bold;
         font-size: 110%;
 
-        transition: 0.01s ;
+        transition: 0.5s ;
         &:hover{
             background-color: $color5-transparent;
             color: inherit;
-            transform: translateX(900px);
+            transform: translateX(10px);
             scale: 1.1;
         }
     }
