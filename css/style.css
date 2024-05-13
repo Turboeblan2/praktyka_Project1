@@ -133,9 +133,11 @@ table {
   border-spacing: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  height: 200vh;
   font-family: "Roboto", sans-serif;
 }
 
@@ -332,6 +334,15 @@ header::after {
   width: 100%;
   height: 100vh;
   position: absolute;
+}
+
+section {
+  min-height: 100vh;
+  padding-top: 120px;
+}
+section h2 {
+  text-align: center;
+  font-size: 2.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
