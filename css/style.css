@@ -139,6 +139,123 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@keyframes show-menu-action {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
+}
+@keyframes hide-menu-action {
+  from {
+    display: block;
+  }
+  to {
+    scale: 0;
+    display: none;
+  }
+}
+nav {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: #730217;
+  color: #f5f5f5;
+}
+
+.logo {
+  flex-basis: 70%;
+  padding: 15px;
+  padding-left: 25px;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.menu {
+  text-align: right;
+  flex-basis: 30%;
+  padding: 15px;
+  padding-right: 25px;
+}
+
+nav .material-icons {
+  color: inherit;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.navigation {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  background-color: #0D0D0D;
+  animation: hide-menu-action 0.5s;
+  color: #f5f5f5;
+}
+@media screen and (min-width: 680px) {
+  .navigation {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .navigation {
+    width: 25%;
+  }
+}
+.navigation .material-icons {
+  color: #f5f5f5;
+  font-size: 3rem;
+  cursor: pointer;
+}
+.navigation ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.navigation li {
+  flex-basis: 10%;
+  width: 100%;
+}
+.navigation a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition-duration: 0.4s;
+  font-size: 1.4rem;
+}
+.navigation a:hover {
+  background-color: rgba(166, 115, 96, 0.6431372549);
+}
+
+.showMenu {
+  display: block;
+  animation: show-menu-action 0.5s;
+}
+
+@keyframes show-header-box {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 header {
   height: 100vh;
   background: url("../assets/img/bg-header.webp") center/cover fixed;
@@ -151,6 +268,7 @@ header .header-box {
   display: flex;
   flex-direction: column;
   padding: 40px;
+  animation: show-header-box 3s;
 }
 header h1 {
   font-size: 2.6rem;
@@ -194,7 +312,7 @@ header a {
   line-height: 60px;
   text-decoration: none;
   text-align: center;
-  background-color: #A67360;
+  background-color: rgba(166, 115, 96, 0.6431372549);
   color: inherit;
   border-radius: 6px;
   font-weight: bold;
@@ -202,7 +320,7 @@ header a {
   transition: 0.5s;
 }
 header a:hover {
-  background-color: rgba(166, 115, 96, 0.6431372549);
+  background-color: #A67360;
   color: inherit;
   transform: translateX(10px);
   scale: 1.1;
@@ -210,7 +328,7 @@ header a:hover {
 header::after {
   content: "";
   display: block;
-  background-color: rgba(0, 0, 0, 0.384);
+  background-color: rgba(0, 0, 0, 0.521);
   width: 100%;
   height: 100vh;
   position: absolute;
