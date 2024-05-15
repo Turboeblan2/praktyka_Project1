@@ -180,20 +180,32 @@ a {
 
 .col {
   width: 100%;
-}
-@media screen and (min-width: 680px) {
-  .col-md50 {
-    flex: 0 0 50%;
-  }
+  padding: 10px;
 }
 @media screen and (min-width: 680px) {
   .col-md33 {
     flex: 0 0 33.333333%;
+  }
+}
+@media screen and (min-width: 680px) {
+  .col-lg50 {
+    flex: 0 0 50%;
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 680px) {
+  .col-md50 {
+    flex: 0 0 50%;
     padding: 10px;
   }
 }
 @media screen and (min-width: 1100px) {
   .col-lg25 {
+    flex: 0 0 25%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .col-md25 {
     flex: 0 0 25%;
   }
 }
@@ -396,6 +408,41 @@ footer {
   background-color: #0D0D0D;
   color: #F2E5D5;
   display: flex;
+  align-items: center;
+}
+
+.menu-box {
+  box-shadow: 0 0 10px gray;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition-duration: 0.5s;
+}
+.menu-box:hover {
+  opacity: 1;
+  box-shadow: 0 0 20px gray;
+}
+.menu-box-picture {
+  height: 160px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.menu-box .picture1 {
+  background: url("../assets/img/pizza1.webp") center/cover;
+}
+.menu-box .picture2 {
+  background: url("../assets/img/pizza2.webp") center/cover;
+}
+.menu-box .picture3 {
+  background: url("../assets/img/pizza3.webp") center/cover;
+}
+.menu-box .picture4 {
+  background: url("../assets/img/pizza4.webp") center/cover;
+}
+.menu-box-text {
+  height: 40px;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
