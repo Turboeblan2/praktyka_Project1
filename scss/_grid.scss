@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    font-size: 1.3rem;
  @include md-screen{
     flex-direction: row;
  }
@@ -29,7 +30,13 @@
     &-md50{
         @include md-screen{
             flex: 0 0 50%;
-            padding: 10px
+            
+        }
+    };
+    &-md33{
+        @include md-screen{
+            flex: 0 0 33.333333%;
+            padding: 10px;
         }
     };
     &-lg25{
@@ -38,4 +45,5 @@
             
         }
     };
+
 }
