@@ -464,19 +464,35 @@ iframe:hover {
   align-items: center;
 }
 
-label {
+input, textarea, label {
   display: block;
   margin-bottom: 5px;
-  font-family: inherit;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
-input {
-  display: block;
-  margin-bottom: 5px;
+input, textarea {
   font-family: inherit;
-  width: 100%;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  outline: 0;
+  transition: 0.2s;
+}
+input:focus, textarea:focus {
+  border-color: grey;
+}
+input[type=submit], textarea[type=submit] {
+  margin-top: 30px;
+}
+input[type=submit]:hover, textarea[type=submit]:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
 }
 
 footer {
